@@ -1,6 +1,7 @@
 ## Over view: tasks in KB construction and their correspondence with human's cognitive processes
 
-<img src="http://www.geekwei.com/wp-content/uploads/2017/07/Screen-Shot-2017-07-09-at-1.43.07-PM-1024x508.png" alt="" width="660" height="327" class="size-large wp-image-99" /> automated construction of KB and in terms of human cognition...[/caption]
+<img src="http://www.geekwei.com/wp-content/uploads/2017/07/Screen-Shot-2017-07-09-at-1.43.07-PM-1024x508.png" alt="" width="660" height="327" class="size-large wp-image-99" /> 
+Central tasks for automated construction of KB. Red are my interpretation of those tasks in terms of human cognition...
 
 A good review of the field is:
 > M. Nickel et al., “A Review of Relational Machine Learning for Knowledge Graphs,” Proceedings of the IEEE 104, no. 1 (January 2016): 11–33, doi:10.1109/JPROC.2015.2483592.
