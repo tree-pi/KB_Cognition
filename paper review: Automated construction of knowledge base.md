@@ -17,20 +17,27 @@ A good review of the field is:
 example of each task:
 
 + lexical pattern and contexts-- Coupled Pattern Learner (CPL); OpenEval
+
 Eg1: hearts full of X => X isA emotion; X ranks second in Y => relation (X teamPlaysInLeague Y) 
+
 Eg2: context includes vitamin => apple is a fruit (not company)
 
 + learn new ontology (category and relation) -- OntExt
+
 Eg:  for the category pair ⟨drug,disease⟩, the sentence *Prozac may cause migraines* might be extracted. New relations such as DrugHasSideEffect(x,y) can then be learnt.
 
 + confidence in knowledge -- Knowledge Integrator (KI)
+
 Eg: a piece of knowledge will be rated as reliable either from high confidence from one source, or medium-confidence but has been proposed by multiple sources 
 
 + infer new relations -- NFOIL(in 2010 NELL) or Path Ranking Algorithm (PRA, in 2015 NELL)
+
 Eg1, athleteInLeague(X , NBA) => athletePlaysSport(X , basketball); 
+
 Eg2,  cityCapitalOfState(X , Y ), cityInCountry(X , USA) => cityInState(X , Y ).
 
 + active inquiry 
+
 Eg1 Coupled SEAL (CSEAL): given *sparrow, swan and kingbird" are instances of "bird", search for html pages with tables including those seed instances, and infer other items in the table as instances of "bird".
 
 ### data
@@ -50,9 +57,11 @@ Note: this is an algorithm that factorizes triplets (x-Relation-y) with latent v
 Experiments that the authors have mentioned include:
 
 + infer the "type-of" link by other link structures ("link prediction experiment"). 
+
 Eg: deleting all the information in KB about "x" isTypeof "Location" but keep other relations; then ask "Washington square" isTypeof what? //these are my understanding...not sure if it's correct
 
 + infer unknown relation by combining existing relations. ("collective learning")
+
 Eg: how to know Friedrich Schiller is a  __(country) writer? By combining the links of <x isBornIn y> and <y isCityInCountry z>. The key is to detect the correlations between these links.
 
 + extract taxonomies by clustering instances
@@ -67,12 +76,15 @@ General task: to add a collection of abstract assertions about nutrition from a 
 <img src="http://www.geekwei.com/wp-content/uploads/2017/07/Screen-Shot-2017-07-09-at-1.51.04-PM.png" alt="" width="1130" height="372" class="alignnone size-full wp-image-102" />
 
 + learn new ontology (category)
+
 Eg: learn new category such as "healthy food" from predetermined constraining lexical patterns (*buckwheat is a  {? food }* -- the concept of buckwheat and food are already learnt)
 
 + learn abstract proposition (a.k.a theory learning)
+
 Eg: *Provide( fruit, {vitamin})* is deduced from the set of tuples { (oranges, provide, vi- tamin c), (bananas, provide, a source of B vitamins), (an avocado, provides, niacin)}. The key challenge is how to find a suitable level of generalization: compare *Provide({fruit}, {vitamin})* versus *Provide({food}, {substance})*, the latter is apparently too general.
 
 + active search constraint under certain topic
+
 How to prioritizes subsequent theory-learning tasks? 
 
 Eg: Given the goal is to learn theories about nutrition, after learning the proposition that * MayPrevent({antioxidant}, {disease})*, the learner shouldn't switch to learn more about all the properties on {disease}.
@@ -88,8 +100,9 @@ Dirk Hovy et al., “Unsupervised Discovery of Domain-Specific Knowledge from Te
 <img src="http://www.geekwei.com/wp-content/uploads/2017/07/Screen-Shot-2017-07-09-at-1.52.17-PM.png" alt="" width="1110" height="522" class="alignnone size-full wp-image-103" />
 
 + learn new categories from sentences.
+
 Eg: “quarterback/NN Steve/NNP Young/NNP, ...”; "Steve Young, the quarterback of his team, said...”; "Steve Young is the quarterback of the 49ers"
-still, from predetermined constraining lexical patterns similar to Alice and Probase.
-Challenge: no supervision / seed knowledge at all.
+
+still, from predetermined constraining lexical patterns similar to Alice and Probase. Challenge: no supervision / seed knowledge at all.
 
 
